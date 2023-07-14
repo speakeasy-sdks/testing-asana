@@ -26,7 +26,7 @@ class GetTasksRequest:
     """
     modified_since: Optional[datetime] = dataclasses.field(default=None, metadata={'query_param': { 'field_name': 'modified_since', 'style': 'form', 'explode': True }})
     r"""Only return tasks that have been modified since the given time.
-    
+
     *Note: A task is considered “modified” if any of its properties
     change, or associations between it and other objects are modified
     (e.g.  a task being added to a project). A task is not considered

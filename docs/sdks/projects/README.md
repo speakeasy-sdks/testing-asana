@@ -462,7 +462,7 @@ Returns an empty data record.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -561,7 +561,7 @@ Returns the complete project record for a single project.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -604,7 +604,7 @@ Returns the compact project records for some filtered set of projects. Use one o
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -653,7 +653,7 @@ Returns a compact representation of all of the projects the task is in.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -697,7 +697,7 @@ Returns the compact project records for all projects in the team.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -745,7 +745,7 @@ Returns the compact project records for all projects in the workspace.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -797,7 +797,7 @@ Milestones are just tasks, so they are included in the `num_tasks`, `num_incompl
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

@@ -29,7 +29,7 @@ class OrganizationExportResponse:
     download_url: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('download_url'), 'exclude': lambda f: f is None }})
     r"""Download this URL to retreive the full export of the organization
     in JSON format. It will be compressed in a gzip (.gz) container.
-    
+
     *Note: May be null if the export is still in progress or
     failed.  If present, this URL may only be valid for 1 hour from
     the time of retrieval. You should avoid persisting this URL

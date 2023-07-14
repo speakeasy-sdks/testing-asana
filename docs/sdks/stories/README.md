@@ -79,7 +79,7 @@ Returns an empty data record.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -124,7 +124,7 @@ Returns the compact records for all stories on the task.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -168,7 +168,7 @@ Returns the full record for a single story.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

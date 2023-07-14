@@ -7,11 +7,11 @@ from typing import Optional
 
 class Projects:
     r"""A project represents a prioritized list of tasks in Asana or a board with columns of tasks represented as cards. A project exists in a single workspace or organization and is accessible to a subset of users in that workspace or organization, depending on its permissions.
-    
+
     Projects in organizations are shared with a single team. Currently, the team of a project cannot be changed via the API. Non-organization workspaces do not have teams and so you should not specify the team of project in a regular workspace.
-    
+
     Followers of a project are a subset of the members of that project. Followers of a project will receive all updates including tasks created, added and removed from that project. Members of the project have access to and will receive status updates of the project. Adding followers to a project will add them as members if they are not already, removing followers from a project will not affect membership.
-    
+
     **Note:** You can use certain project endpoints to operate on [user task lists](/docs/user-task-lists) ([My Tasks](https://asana.com/guide/help/fundamentals/my-tasks)) by substituting the `{project_gid}` with the `{user_task_list_gid}`. For example, you can perform operations on the custom fields of a [user task list](/docs/user-task-lists) by using the following projects endpoints: [Add a custom field to a project](/docs/add-a-custom-field-to-a-project), [Remove a custom field from a project](/docs/remove-a-custom-field-from-a-project) and [Get a project's custom fields](/docs/get-a-projects-custom-fields)
     """
     sdk_configuration: SDKConfiguration
@@ -133,15 +133,15 @@ class Projects:
     def create_project(self, request: operations.CreateProjectRequest) -> operations.CreateProjectResponse:
         r"""Create a project
         Create a new project in a workspace or team.
-        
+
         Every project is required to be created in a specific workspace or
         organization, and this cannot be changed once set. Note that you can use
         the `workspace` parameter regardless of whether or not it is an
         organization.
-        
+
         If the workspace for your project is an organization, you must also
         supply a `team` to share the project with.
-        
+
         Returns the full record of the newly created project.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -179,7 +179,7 @@ class Projects:
     def create_project_for_team(self, request: operations.CreateProjectForTeamRequest) -> operations.CreateProjectForTeamResponse:
         r"""Create a project in a team
         Creates a project shared with the given team.
-        
+
         Returns the full record of the newly created project.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -217,10 +217,10 @@ class Projects:
     def create_project_for_workspace(self, request: operations.CreateProjectForWorkspaceRequest) -> operations.CreateProjectForWorkspaceResponse:
         r"""Create a project in a workspace
         Returns the compact project records for all projects in the workspace.
-        
+
         If the workspace for your project is an organization, you must also
         supply a team to share the project with.
-        
+
         Returns the full record of the newly created project.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -259,7 +259,7 @@ class Projects:
         r"""Delete a project
         A specific, existing project can be deleted by making a DELETE request on
         the URL for that project.
-        
+
         Returns an empty data record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -483,9 +483,9 @@ class Projects:
     def get_task_counts_for_project(self, request: operations.GetTaskCountsForProjectRequest) -> operations.GetTaskCountsForProjectResponse:
         r"""Get task count of a project
         Get an object that holds task count fields. **All fields are excluded by default**. You must [opt in](/docs/input-output-options) using `opt_fields` to get any information from this endpoint.
-        
+
         This endpoint has an additional [rate limit](/docs/standard-rate-limits) and each field counts especially high against our [cost limits](/docs/cost-limits).
-        
+
         Milestones are just tasks, so they are included in the `num_tasks`, `num_incomplete_tasks`, and `num_completed_tasks` counts.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -668,11 +668,11 @@ class Projects:
         A specific, existing project can be updated by making a PUT request on
         the URL for that project. Only the fields provided in the `data` block
         will be updated; any unspecified fields will remain unchanged.
-        
+
         When using this method, it is best to specify only those fields you wish
         to change, or else you may overwrite changes made by another user since
         you last retrieved the task.
-        
+
         Returns the complete updated project record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

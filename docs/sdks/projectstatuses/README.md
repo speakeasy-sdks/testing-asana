@@ -87,7 +87,7 @@ Returns an empty data record.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -133,7 +133,7 @@ Returns the complete record for a single status update.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -179,7 +179,7 @@ Returns the compact project status update records for all updates on the project
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

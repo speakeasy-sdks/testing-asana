@@ -7,14 +7,14 @@ from typing import Optional
 
 class ProjectStatuses:
     r"""*Deprecated: new integrations should prefer using [status updates](/docs/asana-statuses)*
-    
+
     A project status is an update on the progress of a particular project,
     and is sent out to all project followers when created. These updates
     include both text describing the update and a color code intended to
     represent the overall state of the project: \"green\" for projects that
     are on track, \"yellow\" for projects at risk, \"red\" for projects that
     are behind, and \"blue\" for projects on hold.
-    
+
     Project statuses can be created and deleted, but not modified.
     """
     sdk_configuration: SDKConfiguration
@@ -26,9 +26,9 @@ class ProjectStatuses:
     def create_project_status_for_project(self, request: operations.CreateProjectStatusForProjectRequest) -> operations.CreateProjectStatusForProjectResponse:
         r"""Create a project status
         *Deprecated: new integrations should prefer the `/status_updates` route.*
-        
+
         Creates a new status update on the project.
-        
+
         Returns the full record of the newly created project status update.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -66,9 +66,9 @@ class ProjectStatuses:
     def delete_project_status(self, request: operations.DeleteProjectStatusRequest) -> operations.DeleteProjectStatusResponse:
         r"""Delete a project status
         *Deprecated: new integrations should prefer the `/status_updates/{status_gid}` route.*
-        
+
         Deletes a specific, existing project status update.
-        
+
         Returns an empty data record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -101,7 +101,7 @@ class ProjectStatuses:
     def get_project_status(self, request: operations.GetProjectStatusRequest) -> operations.GetProjectStatusResponse:
         r"""Get a project status
         *Deprecated: new integrations should prefer the `/status_updates/{status_gid}` route.*
-        
+
         Returns the complete record for a single status update.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -134,7 +134,7 @@ class ProjectStatuses:
     def get_project_statuses_for_project(self, request: operations.GetProjectStatusesForProjectRequest) -> operations.GetProjectStatusesForProjectResponse:
         r"""Get statuses from a project
         *Deprecated: new integrations should prefer the `/status_updates` route.*
-        
+
         Returns the compact project status update records for all updates on the project.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

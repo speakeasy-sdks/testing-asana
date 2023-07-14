@@ -18,7 +18,7 @@ Returns the complete workspace record for a single workspace membership.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -62,7 +62,7 @@ Returns the compact workspace membership records for the user.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -106,7 +106,7 @@ Returns the compact workspace membership records for the workspace.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

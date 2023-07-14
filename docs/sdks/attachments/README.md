@@ -90,7 +90,7 @@ Returns an empty data record.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -135,7 +135,7 @@ Get the full record for a single attachment.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -180,7 +180,7 @@ There are three possible `parent` values for this request: `project`, `project_b
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

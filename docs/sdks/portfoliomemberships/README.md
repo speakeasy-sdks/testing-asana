@@ -18,7 +18,7 @@ Returns the complete portfolio record for a single portfolio membership.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -61,7 +61,7 @@ Returns a list of portfolio memberships in compact representation. You must spec
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -108,7 +108,7 @@ Returns the compact portfolio membership records for the portfolio.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

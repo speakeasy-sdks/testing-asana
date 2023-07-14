@@ -19,7 +19,7 @@ from typing import Optional
 @dataclasses.dataclass
 class AuditLogEvent:
     r"""An object representing a single event within an Asana domain.
-    
+
     Every audit log event is comprised of an `event_type`, `actor`, `resource`, and `context`. Some events will include additional metadata about the event under `details`. See our [currently supported list of events](/docs/supported-auditlogevents) for more details.
     """
     actor: Optional[shared_auditlogeventactor.AuditLogEventActor] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('actor'), 'exclude': lambda f: f is None }})

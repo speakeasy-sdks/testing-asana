@@ -16,7 +16,7 @@ class GoalRelationships:
     def add_supporting_relationship(self, request: operations.AddSupportingRelationshipRequest) -> operations.AddSupportingRelationshipResponse:
         r"""Add a supporting goal relationship
         Creates a goal relationship by adding a supporting resource to a given goal.
-        
+
         Returns the newly created goal relationship record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -154,7 +154,7 @@ class GoalRelationships:
         An existing goal relationship can be updated by making a PUT request on the URL for
         that goal relationship. Only the fields provided in the `data` block will be updated;
         any unspecified fields will remain unchanged.
-        
+
         Returns the complete updated goal relationship record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

@@ -29,12 +29,12 @@ class AttachmentRequestResourceSubtype(str, Enum):
 @dataclasses.dataclass
 class AttachmentRequest1:
     r"""The file you want to upload.
-    
+
     *Note when using curl:*
-    
+
     Be sure to add an `‘@’` before the file path, and use the `--form`
     option instead of the `-d` option.
-    
+
     When uploading PDFs with curl, force the content-type to be pdf by
     appending the content type to the file path: `--form
     \"file=@file.pdf;type=application/pdf\"`.

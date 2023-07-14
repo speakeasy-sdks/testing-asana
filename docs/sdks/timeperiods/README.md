@@ -17,7 +17,7 @@ Returns the full record for a single time period.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -63,7 +63,7 @@ Returns compact time period records.
 ```python
 import testing_2
 import dateutil.parser
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

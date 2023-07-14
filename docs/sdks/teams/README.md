@@ -126,7 +126,7 @@ Returns the full record for a single team.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -170,7 +170,7 @@ Returns the compact records for all teams to which the given user is assigned.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -216,7 +216,7 @@ Returns the compact records for all teams in the workspace visible to the author
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

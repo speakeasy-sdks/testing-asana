@@ -16,7 +16,7 @@ class Teams:
     def add_user_for_team(self, request: operations.AddUserForTeamRequest) -> operations.AddUserForTeamResponse:
         r"""Add a user to a team
         The user making this call must be a member of the team in order to add others. The user being added must exist in the same organization as the team.
-        
+
         Returns the complete team membership record for the newly added user.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

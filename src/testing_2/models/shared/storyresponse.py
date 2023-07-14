@@ -129,7 +129,7 @@ class StoryResponse:
     """
     hearts: Optional[list[shared_like.Like]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('hearts'), 'exclude': lambda f: f is None }})
     r"""*Deprecated - please use likes instead*
-    
+
     *Conditional*. Array of likes for users who have hearted this story.
     """
     html_text: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('html_text'), 'exclude': lambda f: f is None }})
@@ -165,7 +165,7 @@ class StoryResponse:
     r"""*Conditional*"""
     num_hearts: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('num_hearts'), 'exclude': lambda f: f is None }})
     r"""*Deprecated - please use likes instead*
-    
+
     *Conditional*. The number of users who have hearted this story.
     """
     num_likes: Optional[int] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('num_likes'), 'exclude': lambda f: f is None }})
@@ -191,7 +191,7 @@ class StoryResponse:
     r"""*Conditional*"""
     previews: Optional[list[shared_preview.Preview]] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('previews'), 'exclude': lambda f: f is None }})
     r"""*Conditional*. A collection of previews to be displayed in the story.
-    
+
     *Note: This property only exists for comment stories.*
     """
     project: Optional[shared_projectcompact.ProjectCompact] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('project'), 'exclude': lambda f: f is None }})

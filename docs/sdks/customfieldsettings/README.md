@@ -17,7 +17,7 @@ Returns a list of all of the custom fields settings on a portfolio, in compact f
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -63,7 +63,7 @@ Returns a list of all of the custom fields settings on a project, in compact for
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

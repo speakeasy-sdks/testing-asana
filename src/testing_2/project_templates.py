@@ -10,8 +10,8 @@ class ProjectTemplates:
     with a predefined setup, which may include tasks, sections, rules, etc.
     It simplifies the process of running a workflow that involves a similar
     set of work every time.
-    
-    
+
+
     Project templates in organizations are shared with a single team. Currently, the
     team of a project template cannot be changed via the API.
     """
@@ -117,9 +117,9 @@ class ProjectTemplates:
     def instantiate_project(self, request: operations.InstantiateProjectRequest) -> operations.InstantiateProjectResponse:
         r"""Instantiate a project from a project template
         Creates and returns a job that will asynchronously handle the project instantiation.
-        
+
         To form this request, it is recommended to first make a request to [get a project template](/docs/get-a-project-template). Then, from the response, copy the `gid` from the object in the `requested_dates` array. This `gid` should be used in `requested_dates` to instantiate a project.
-        
+
         _Note: The body of this request will differ if your workspace is an organization. To determine if your workspace is an organization, use the [is_organization](/docs/workspace) parameter._
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

@@ -23,7 +23,7 @@ Results are given in order (The same order as Asana's sidebar).
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -67,7 +67,7 @@ Returns the full user record for the single user with the provided ID.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -112,7 +112,7 @@ Results are sorted by user ID.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -158,7 +158,7 @@ Results are sorted alphabetically and limited to 2000. For more results use the 
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -202,7 +202,7 @@ Results are sorted alphabetically and limited to 2000. For more results use the 
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

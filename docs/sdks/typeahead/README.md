@@ -51,7 +51,7 @@ projects that are relevant for the requesting user's api token.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

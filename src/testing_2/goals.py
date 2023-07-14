@@ -54,7 +54,7 @@ class Goals:
     def create_goal(self, request: operations.CreateGoalRequest) -> operations.CreateGoalResponse:
         r"""Create a goal
         Creates a new goal in a workspace or team.
-        
+
         Returns the full record of the newly created goal.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -128,7 +128,7 @@ class Goals:
     def delete_goal(self, request: operations.DeleteGoalRequest) -> operations.DeleteGoalResponse:
         r"""Delete a goal
         A specific, existing goal can be deleted by making a DELETE request on the URL for that goal.
-        
+
         Returns an empty data record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -294,7 +294,7 @@ class Goals:
         An existing goal can be updated by making a PUT request on the URL for
         that goal. Only the fields provided in the `data` block will be updated;
         any unspecified fields will remain unchanged.
-        
+
         Returns the complete updated goal record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -333,7 +333,7 @@ class Goals:
         r"""Update a goal metric
         Updates a goal's existing metric's `current_number_value` if one exists,
         otherwise responds with a 400 status code.
-        
+
         Returns the complete updated goal metric record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

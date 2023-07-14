@@ -16,12 +16,12 @@ from typing import Optional
 class CreateAttachmentForObjectRequest:
     attachment_request1: shared_attachmentrequest1.AttachmentRequest1 = dataclasses.field(metadata={'request': { 'media_type': 'multipart/form-data' }})
     r"""The file you want to upload.
-    
+
     *Note when using curl:*
-    
+
     Be sure to add an `‘@’` before the file path, and use the `--form`
     option instead of the `-d` option.
-    
+
     When uploading PDFs with curl, force the content-type to be pdf by
     appending the content type to the file path: `--form
     \"file=@file.pdf;type=application/pdf\"`.

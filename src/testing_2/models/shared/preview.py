@@ -12,7 +12,7 @@ from typing import Optional
 @dataclasses.dataclass
 class Preview:
     r"""A collection of rich text that will be displayed as a preview to another app.
-    
+
     This is read-only except for a small group of whitelisted apps.
     """
     fallback: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('fallback'), 'exclude': lambda f: f is None }})

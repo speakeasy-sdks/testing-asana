@@ -12,7 +12,7 @@ class StatusUpdates:
     represent the overall state of the project. These include: `on_track` for projects that
     are on track, `at_risk` for projects at risk, `off_track` for projects that
     are behind, and `on_hold` for projects on hold.
-    
+
     Status updates can be created and deleted, but not modified.
     """
     sdk_configuration: SDKConfiguration
@@ -61,7 +61,7 @@ class StatusUpdates:
     def delete_status(self, request: operations.DeleteStatusRequest) -> operations.DeleteStatusResponse:
         r"""Delete a status update
         Deletes a specific, existing status update.
-        
+
         Returns an empty data record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

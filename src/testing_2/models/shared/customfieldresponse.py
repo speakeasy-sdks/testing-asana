@@ -172,15 +172,15 @@ class CustomFieldResponseDateValue:
 @dataclasses.dataclass
 class CustomFieldResponseEnumValue:
     r"""Enum options are the possible values which an enum custom field can adopt. An enum custom field must contain at least 1 enum option but no more than 500.
-    
+
     You can add enum options to a custom field by using the `POST /custom_fields/custom_field_gid/enum_options` endpoint.
-    
+
     **It is not possible to remove or delete an enum option**. Instead, enum options can be disabled by updating the `enabled` field to false with the `PUT /enum_options/enum_option_gid` endpoint. Other attributes can be updated similarly.
-    
+
     On creation of an enum option, `enabled` is always set to `true`, meaning the enum option is a selectable value for the custom field. Setting `enabled=false` is equivalent to “trashing” the enum option in the Asana web app within the “Edit Fields” dialog. The enum option will no longer be selectable but, if the enum option value was previously set within a task, the task will retain the value.
-    
+
     Enum options are an ordered list and by default new enum options are inserted at the end. Ordering in relation to existing enum options can be specified on creation by using `insert_before` or `insert_after` to reference an existing enum option. Only one of `insert_before` and `insert_after` can be provided when creating a new enum option.
-    
+
     An enum options list can be reordered with the `POST /custom_fields/custom_field_gid/enum_options/insert` endpoint.
     """
     color: Optional[str] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('color'), 'exclude': lambda f: f is None }})
@@ -226,7 +226,7 @@ class CustomFieldResponseType(str, Enum):
 @dataclasses.dataclass
 class CustomFieldResponse:
     r"""Custom Fields store the metadata that is used in order to add user-specified information to tasks in Asana. Be sure to reference the [Custom Fields](/docs/asana-custom-fields) developer documentation for more information about how custom fields relate to various resources in Asana.
-    
+
     Users in Asana can [lock custom fields](https://asana.com/guide/help/premium/custom-fields#gl-lock-fields), which will make them read-only when accessed by other users. Attempting to edit a locked custom field will return HTTP error code `403 Forbidden`.
     """
     asana_created_field: Optional[CustomFieldResponseAsanaCreatedField] = dataclasses.field(default=None, metadata={'dataclasses_json': { 'letter_case': utils.get_field_name('asana_created_field'), 'exclude': lambda f: f is None }})

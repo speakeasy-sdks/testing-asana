@@ -128,7 +128,7 @@ class Portfolios:
     def create_portfolio(self, request: operations.CreatePortfolioRequest) -> operations.CreatePortfolioResponse:
         r"""Create a portfolio
         Creates a new portfolio in the given workspace with the supplied name.
-        
+
         Note that portfolios created in the Asana UI may have some state
         (like the “Priority” custom field) which is automatically added
         to the portfolio when it is created. Portfolios created via our
@@ -171,7 +171,7 @@ class Portfolios:
         r"""Delete a portfolio
         An existing portfolio can be deleted by making a DELETE request on
         the URL for that portfolio.
-        
+
         Returns an empty data record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -409,7 +409,7 @@ class Portfolios:
         An existing portfolio can be updated by making a PUT request on the URL for
         that portfolio. Only the fields provided in the `data` block will be updated;
         any unspecified fields will remain unchanged.
-        
+
         Returns the complete updated portfolio record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

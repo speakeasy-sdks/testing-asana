@@ -7,9 +7,9 @@ from typing import Optional
 
 class Sections:
     r"""A section is a subdivision of a project that groups tasks together. It can either be a header above a list of tasks in a list view or a column in a board view of a project.
-    
+
     Sections are largely a shared idiom in Asana’s API for both list and board views of a project regardless of the project’s layout.
-    
+
     The ‘memberships’ property when [getting a task](/docs/get-a-task) will return the information for the section or the column under ‘section’ in the response.
     """
     sdk_configuration: SDKConfiguration
@@ -21,9 +21,9 @@ class Sections:
     def add_task_for_section(self, request: operations.AddTaskForSectionRequest) -> operations.AddTaskForSectionResponse:
         r"""Add task to section
         Add a task to a specific, existing section. This will remove the task from other sections of the project.
-        
+
         The task will be inserted at the top of a section unless an insert_before or insert_after parameter is declared.
-        
+
         This does not work for separators (tasks with the resource_subtype of section).
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -99,11 +99,11 @@ class Sections:
         r"""Delete a section
         A specific, existing section can be deleted by making a DELETE request on
         the URL for that section.
-        
+
         Note that sections must be empty to be deleted.
-        
+
         The last remaining section cannot be deleted.
-        
+
         Returns an empty data block.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -199,9 +199,9 @@ class Sections:
         r"""Move or Insert sections
         Move sections relative to each other. One of
         `before_section` or `after_section` is required.
-        
+
         Sections cannot be moved between projects.
-        
+
         Returns an empty data block.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -242,11 +242,11 @@ class Sections:
         the URL for that project. Only the fields provided in the `data` block
         will be updated; any unspecified fields will remain unchanged. (note that
         at this time, the only field that can be updated is the `name` field.)
-        
+
         When using this method, it is best to specify only those fields you wish
         to change, or else you may overwrite changes made by another user since
         you last retrieved the task.
-        
+
         Returns the complete updated section record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

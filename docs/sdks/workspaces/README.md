@@ -72,7 +72,7 @@ Returns the full workspace record for a single workspace.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -117,7 +117,7 @@ Returns the compact records for all workspaces visible to the authorized user.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

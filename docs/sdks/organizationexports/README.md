@@ -80,7 +80,7 @@ Returns details of a previously-requested Organization export.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

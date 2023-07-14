@@ -7,7 +7,7 @@ from typing import Optional
 
 class Tags:
     r"""A tag is a label that can be attached to any task in Asana. It exists in a single workspace or organization.
-    
+
     Tags have some metadata associated with them, but it is possible that we will simplify them in the future so it is not encouraged to rely too heavily on it. Unlike projects, tags do not provide any ordering on the tasks they are associated with.
     """
     sdk_configuration: SDKConfiguration
@@ -19,12 +19,12 @@ class Tags:
     def create_tag(self, request: operations.CreateTagRequest) -> operations.CreateTagResponse:
         r"""Create a tag
         Creates a new tag in a workspace or organization.
-        
+
         Every tag is required to be created in a specific workspace or
         organization, and this cannot be changed once set. Note that you can use
         the workspace parameter regardless of whether or not it is an
         organization.
-        
+
         Returns the full record of the newly created tag.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -62,12 +62,12 @@ class Tags:
     def create_tag_for_workspace(self, request: operations.CreateTagForWorkspaceRequest) -> operations.CreateTagForWorkspaceResponse:
         r"""Create a tag in a workspace
         Creates a new tag in a workspace or organization.
-        
+
         Every tag is required to be created in a specific workspace or
         organization, and this cannot be changed once set. Note that you can use
         the workspace parameter regardless of whether or not it is an
         organization.
-        
+
         Returns the full record of the newly created tag.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -106,7 +106,7 @@ class Tags:
         r"""Delete a tag
         A specific, existing tag can be deleted by making a DELETE request on
         the URL for that tag.
-        
+
         Returns an empty data record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -264,11 +264,11 @@ class Tags:
         r"""Update a tag
         Updates the properties of a tag. Only the fields provided in the `data`
         block will be updated; any unspecified fields will remain unchanged.
-        
+
         When using this method, it is best to specify only those fields you wish
         to change, or else you may overwrite changes made by another user since
         you last retrieved the tag.
-        
+
         Returns the complete updated tag record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

@@ -75,7 +75,7 @@ Returns the complete updated goal relationship record for a single goal relation
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -117,7 +117,7 @@ Returns compact goal relationship records.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

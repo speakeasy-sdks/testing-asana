@@ -158,7 +158,7 @@ This method *permanently* removes a webhook. Note that it may be possible to rec
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -200,7 +200,7 @@ Returns the full record for the given webhook.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -243,7 +243,7 @@ Get the compact representation of all webhooks your app has registered for the a
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

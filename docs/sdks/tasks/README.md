@@ -507,7 +507,7 @@ Returns an empty data record.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -601,7 +601,7 @@ Returns the compact representations of all of the dependencies of a task.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -645,7 +645,7 @@ Returns the compact representations of all of the dependents of a task.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -689,7 +689,7 @@ Returns a compact representation of all of the subtasks of a task.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -733,7 +733,7 @@ Returns the complete task record for a single task.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -780,7 +780,7 @@ For more complex task retrieval, use [workspaces/{workspace_gid}/tasks/search](/
 ```python
 import testing_2
 import dateutil.parser
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -832,7 +832,7 @@ Returns the compact task records for all tasks within the given project, ordered
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -880,7 +880,7 @@ if res.get_tasks_for_project_200_application_json_object is not None:
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -926,7 +926,7 @@ Returns the compact task records for all tasks with the given tag. Tasks can hav
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -973,7 +973,7 @@ Returns the compact list of tasks in a user’s My Tasks list.
 
 ```python
 import testing_2
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(
@@ -1306,7 +1306,7 @@ For example, if the gid of the custom field is 12345, these query parameter to f
 ```python
 import testing_2
 import dateutil.parser
-from testing_2.models import operations
+from testing_2.models import operations, shared
 
 s = testing_2.Testing2(
     security=shared.Security(

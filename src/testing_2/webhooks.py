@@ -7,7 +7,7 @@ from typing import Optional
 
 class Webhooks:
     r"""Webhooks allow you to subscribe to notifications about events that occur on Asana resources (e.g., tasks, projects, stories, etc.).
-    
+
     For a more detailed explanation of webhooks see the [overview of webhooks](/docs/overview-of-webhooks).
     """
     sdk_configuration: SDKConfiguration
@@ -20,23 +20,23 @@ class Webhooks:
         r"""Establish a webhook
         Establishing a webhook is a two-part process. First, a simple HTTP POST
         request initiates the creation similar to creating any other resource.
-        
+
         Next, in the middle of this request comes the confirmation handshake.
         When a webhook is created, we will send a test POST to the target with an
         `X-Hook-Secret` header. The target must respond with a `200 OK` or `204
         No Content` and a matching `X-Hook-Secret` header to confirm that this
         webhook subscription is indeed expected. We strongly recommend storing
         this secret to be used to verify future webhook event signatures.
-        
+
         The POST request to create the webhook will then return with the status
         of the request. If you do not acknowledge the webhook’s confirmation
         handshake it will fail to setup, and you will receive an error in
         response to your attempt to create it. This means you need to be able to
         receive and complete the webhook *while* the POST request is in-flight
         (in other words, have a server that can handle requests asynchronously).
-        
+
         Invalid hostnames like localhost will recieve a 403 Forbidden status code.
-        
+
         ```
         # Request
         curl -H \"Authorization: Bearer <personal_access_token>\" \
@@ -44,19 +44,19 @@ class Webhooks:
         -d \"resource=8675309\" \
         -d \"target=https://example.com/receive-webhook/7654\"
         ```
-        
+
         ```
         # Handshake sent to https://example.com/
         POST /receive-webhook/7654
         X-Hook-Secret: b537207f20cbfa02357cf448134da559e8bd39d61597dcd5631b8012eae53e81
         ```
-        
+
         ```
         # Handshake response sent by example.com
         HTTP/1.1 200
         X-Hook-Secret: b537207f20cbfa02357cf448134da559e8bd39d61597dcd5631b8012eae53e81
         ```
-        
+
         ```
         # Response
         HTTP/1.1 201

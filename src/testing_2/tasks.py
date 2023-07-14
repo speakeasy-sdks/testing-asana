@@ -7,9 +7,9 @@ from typing import Optional
 
 class Tasks:
     r"""The task is the basic object around which many operations in Asana are centered. In the Asana application, multiple tasks populate the middle pane according to some view parameters, and the set of selected tasks determines the more detailed information presented in the details pane.
-    
+
     Sections are unique in that they will be included in the `memberships` field of task objects returned in the API when the task is within a section. They can also be used to manipulate the ordering of a task within a project.
-    
+
     [Queries](/docs/get-multiple-tasks) return a [compact representation of each task object](/docs/task-compact). To retrieve *all* fields or *specific set* of the fields, use [field selectors](/docs/input-output-options) to manipulate what data is included in a response.
     """
     sdk_configuration: SDKConfiguration
@@ -133,16 +133,16 @@ class Tasks:
         Adds the task to the specified project, in the optional location
         specified. If no location arguments are given, the task will be added to
         the end of the project.
-        
+
         `addProject` can also be used to reorder a task within a project or
         section that already contains it.
-        
+
         At most one of `insert_before`, `insert_after`, or `section` should be
         specified. Inserting into a section in an non-order-dependent way can be
         done by specifying section, otherwise, to insert within a section in a
         particular place, specify `insert_before` or `insert_after` and a task
         within the section to anchor the position of this task.
-        
+
         Returns an empty data block.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -254,7 +254,7 @@ class Tasks:
         Creating a new task is as easy as POSTing to the `/tasks` endpoint with a
         data block containing the fields you’d like to set on the task. Any
         unspecified fields will take on default values.
-        
+
         Every task is required to be created in a specific workspace, and this
         workspace cannot be changed once set. The workspace need not be set
         explicitly if you specify `projects` or a `parent` task instead.
@@ -297,7 +297,7 @@ class Tasks:
         the URL for that task. Deleted tasks go into the “trash” of the user
         making the delete request. Tasks can be recovered from the trash within a
         period of 30 days; afterward they are completely removed from the system.
-        
+
         Returns an empty data record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -490,7 +490,7 @@ class Tasks:
     def get_tasks(self, request: operations.GetTasksRequest) -> operations.GetTasksResponse:
         r"""Get multiple tasks
         Returns the compact task records for some filtered set of tasks. Use one or more of the parameters provided to filter the tasks returned. You must specify a `project` or `tag` if you do not specify `assignee` and `workspace`.
-        
+
         For more complex task retrieval, use [workspaces/{workspace_gid}/tasks/search](/docs/search-tasks-in-a-workspace).
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -758,7 +758,7 @@ class Tasks:
         r"""Remove a project from a task
         Removes the task from the specified project. The task will still exist in
         the system, but it will not be in the project anymore.
-        
+
         Returns an empty data block.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -834,9 +834,9 @@ class Tasks:
         To mirror the functionality of the Asana web app's advanced search feature, the Asana API has a task search endpoint that allows you to build complex filters to find and retrieve the exact data you need.
         #### Premium access
         Like the Asana web product's advance search feature, this search endpoint will only be available to premium Asana users. A user is premium if any of the following is true:
-        
+
         - The workspace in which the search is being performed is a premium workspace - The user is a member of a premium team inside the workspace
-        
+
         Even if a user is only a member of a premium team inside a non-premium workspace, search will allow them to find data anywhere in the workspace, not just inside the premium team. Making a search request using credentials of a non-premium user will result in a `402 Payment Required` error.
         #### Pagination
         Search results are not stable; repeating the same query multiple times may return the data in a different order, even if the data do not change. Because of this, the traditional [pagination](https://developers.asana.com/docs/#pagination) available elsewhere in the Asana API is not available here. However, you can paginate manually by sorting the search results by their creation time and then modifying each subsequent query to exclude data you have already seen. Page sizes are limited to a maximum of 100 items, and can be specified by the `limit` query parameter.
@@ -856,12 +856,12 @@ class Tasks:
         | custom_fields.{gid}.contains | Text only | String |
         | custom_fields.{gid}.less_than | Number only | Number |
         | custom_fields.{gid}.greater_than | Number only | Number |
-        
-        
+
+
         For example, if the gid of the custom field is 12345, these query parameter to find tasks where it is set would be `custom_fields.12345.is_set=true`. To match an exact value for an enum custom field, use the gid of the desired enum option and not the name of the enum option: `custom_fields.12345.value=67890`.
-        
+
         **Not Supported**: searching for multiple exact matches of a custom field, searching for multi-enum custom field
-        
+
         *Note: If you specify `projects.any` and `sections.any`, you will receive tasks for the project **and** tasks for the section. If you're looking for only tasks in a section, omit the `projects.any` from the request.*
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())
@@ -932,11 +932,11 @@ class Tasks:
         A specific, existing task can be updated by making a PUT request on the
         URL for that task. Only the fields provided in the `data` block will be
         updated; any unspecified fields will remain unchanged.
-        
+
         When using this method, it is best to specify only those fields you wish
         to change, or else you may overwrite changes made by another user since
         you last retrieved the task.
-        
+
         Returns the complete updated task record.
         """
         base_url = utils.template_url(*self.sdk_configuration.get_server_details())

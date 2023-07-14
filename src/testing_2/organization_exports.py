@@ -7,9 +7,9 @@ from typing import Optional
 
 class OrganizationExports:
     r"""An `organization_export` object represents a request to export the complete data of an organization in JSON format.
-    
+
     To export an organization using this API:
-    
+
     * Create an `organization_export`
       [request](/docs/create-an-organization-export-request)
       and store the ID that is returned.
@@ -17,8 +17,8 @@ class OrganizationExports:
       `state` field contains ‘finished’.
     * Download the file located at the URL in the `download_url` field. * Exports can take a long time, from several minutes to a few hours
       for large organizations.
-    
-    
+
+
     *Note: These endpoints are only available to [Service Accounts](https://asana.com/guide/help/premium/service-accounts) of an [Enterprise](https://asana.com/enterprise) organization.*
     """
     sdk_configuration: SDKConfiguration
