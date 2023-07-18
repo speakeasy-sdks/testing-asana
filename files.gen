@@ -35,6 +35,7 @@ pylintrc
 setup.py
 src/testing_2/__init__.py
 src/testing_2/models/__init__.py
+src/testing_2/models/errors/sdkerror.py
 src/testing_2/utils/__init__.py
 src/testing_2/utils/retries.py
 src/testing_2/utils/utils.py
@@ -330,6 +331,7 @@ src/testing_2/models/shared/workspaceremoveuserrequest.py
 src/testing_2/models/shared/workspacerequest.py
 src/testing_2/models/shared/security.py
 src/testing_2/models/shared/__init__.py
+src/testing_2/models/errors/__init__.py
 docs/sdks/testing2/README.md
 docs/sdks/attachments/README.md
 docs/sdks/auditlogapi/README.md
