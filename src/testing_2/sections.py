@@ -36,7 +36,7 @@ class Sections:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.AddTaskForSectionRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -77,7 +77,7 @@ class Sections:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.CreateSectionForProjectRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -119,7 +119,7 @@ class Sections:
         url = utils.generate_url(operations.DeleteSectionRequest, base_url, '/sections/{section_gid}', request)
         headers = {}
         query_params = utils.get_query_params(operations.DeleteSectionRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -154,7 +154,7 @@ class Sections:
         url = utils.generate_url(operations.GetSectionRequest, base_url, '/sections/{section_gid}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetSectionRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -189,7 +189,7 @@ class Sections:
         url = utils.generate_url(operations.GetSectionsForProjectRequest, base_url, '/projects/{project_gid}/sections', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetSectionsForProjectRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -234,7 +234,7 @@ class Sections:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.InsertSectionForProjectRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -283,7 +283,7 @@ class Sections:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.UpdateSectionRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client

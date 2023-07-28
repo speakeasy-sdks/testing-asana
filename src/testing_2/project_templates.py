@@ -30,7 +30,7 @@ class ProjectTemplates:
         url = utils.generate_url(operations.GetProjectTemplateRequest, base_url, '/project_templates/{project_template_gid}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetProjectTemplateRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -65,7 +65,7 @@ class ProjectTemplates:
         url = base_url + '/project_templates'
         headers = {}
         query_params = utils.get_query_params(operations.GetProjectTemplatesRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -100,7 +100,7 @@ class ProjectTemplates:
         url = utils.generate_url(operations.GetProjectTemplatesForTeamRequest, base_url, '/teams/{team_gid}/project_templates', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetProjectTemplatesForTeamRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -142,7 +142,7 @@ class ProjectTemplates:
         if req_content_type not in ('multipart/form-data', 'multipart/mixed'):
             headers['content-type'] = req_content_type
         query_params = utils.get_query_params(operations.InstantiateProjectRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client

@@ -41,7 +41,7 @@ class ProjectStatuses:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.CreateProjectStatusForProjectRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -80,7 +80,7 @@ class ProjectStatuses:
         url = utils.generate_url(operations.DeleteProjectStatusRequest, base_url, '/project_statuses/{project_status_gid}', request)
         headers = {}
         query_params = utils.get_query_params(operations.DeleteProjectStatusRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -117,7 +117,7 @@ class ProjectStatuses:
         url = utils.generate_url(operations.GetProjectStatusRequest, base_url, '/project_statuses/{project_status_gid}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetProjectStatusRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -154,7 +154,7 @@ class ProjectStatuses:
         url = utils.generate_url(operations.GetProjectStatusesForProjectRequest, base_url, '/projects/{project_gid}/project_statuses', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetProjectStatusesForProjectRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client

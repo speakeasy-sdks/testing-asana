@@ -22,7 +22,7 @@ class TimePeriods:
         url = utils.generate_url(operations.GetTimePeriodRequest, base_url, '/time_periods/{time_period_gid}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetTimePeriodRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -57,7 +57,7 @@ class TimePeriods:
         url = base_url + '/time_periods'
         headers = {}
         query_params = utils.get_query_params(operations.GetTimePeriodsRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client

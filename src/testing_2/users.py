@@ -26,7 +26,7 @@ class Users:
         url = utils.generate_url(operations.GetFavoritesForUserRequest, base_url, '/users/{user_gid}/favorites', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetFavoritesForUserRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -61,7 +61,7 @@ class Users:
         url = utils.generate_url(operations.GetUserRequest, base_url, '/users/{user_gid}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetUserRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -97,7 +97,7 @@ class Users:
         url = base_url + '/users'
         headers = {}
         query_params = utils.get_query_params(operations.GetUsersRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -133,7 +133,7 @@ class Users:
         url = utils.generate_url(operations.GetUsersForTeamRequest, base_url, '/teams/{team_gid}/users', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetUsersForTeamRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -169,7 +169,7 @@ class Users:
         url = utils.generate_url(operations.GetUsersForWorkspaceRequest, base_url, '/workspaces/{workspace_gid}/users', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetUsersForWorkspaceRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client

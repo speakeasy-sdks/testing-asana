@@ -29,7 +29,7 @@ class Portfolios:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.AddCustomFieldSettingForPortfolioRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -70,7 +70,7 @@ class Portfolios:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.AddItemForPortfolioRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -111,7 +111,7 @@ class Portfolios:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.AddMembersForPortfolioRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -157,7 +157,7 @@ class Portfolios:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.CreatePortfolioRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -195,7 +195,7 @@ class Portfolios:
         url = utils.generate_url(operations.DeletePortfolioRequest, base_url, '/portfolios/{portfolio_gid}', request)
         headers = {}
         query_params = utils.get_query_params(operations.DeletePortfolioRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -230,7 +230,7 @@ class Portfolios:
         url = utils.generate_url(operations.GetItemsForPortfolioRequest, base_url, '/portfolios/{portfolio_gid}/items', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetItemsForPortfolioRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -265,7 +265,7 @@ class Portfolios:
         url = utils.generate_url(operations.GetPortfolioRequest, base_url, '/portfolios/{portfolio_gid}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetPortfolioRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -300,7 +300,7 @@ class Portfolios:
         url = base_url + '/portfolios'
         headers = {}
         query_params = utils.get_query_params(operations.GetPortfoliosRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -340,7 +340,7 @@ class Portfolios:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.RemoveCustomFieldSettingForPortfolioRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -381,7 +381,7 @@ class Portfolios:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.RemoveItemForPortfolioRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -422,7 +422,7 @@ class Portfolios:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.RemoveMembersForPortfolioRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -466,7 +466,7 @@ class Portfolios:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.UpdatePortfolioRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client

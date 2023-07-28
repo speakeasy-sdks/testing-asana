@@ -32,7 +32,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.AddDependenciesForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -72,7 +72,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.AddDependentsForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -114,7 +114,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.AddFollowersForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -167,7 +167,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.AddProjectForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -207,7 +207,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.AddTagForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -247,7 +247,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.CreateSubtaskForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -293,7 +293,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.CreateTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -333,7 +333,7 @@ class Tasks:
         url = utils.generate_url(operations.DeleteTaskRequest, base_url, '/tasks/{task_gid}', request)
         headers = {}
         query_params = utils.get_query_params(operations.DeleteTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -373,7 +373,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.DuplicateTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -408,7 +408,7 @@ class Tasks:
         url = utils.generate_url(operations.GetDependenciesForTaskRequest, base_url, '/tasks/{task_gid}/dependencies', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetDependenciesForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -443,7 +443,7 @@ class Tasks:
         url = utils.generate_url(operations.GetDependentsForTaskRequest, base_url, '/tasks/{task_gid}/dependents', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetDependentsForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -478,7 +478,7 @@ class Tasks:
         url = utils.generate_url(operations.GetSubtasksForTaskRequest, base_url, '/tasks/{task_gid}/subtasks', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetSubtasksForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -513,7 +513,7 @@ class Tasks:
         url = utils.generate_url(operations.GetTaskRequest, base_url, '/tasks/{task_gid}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -550,7 +550,7 @@ class Tasks:
         url = base_url + '/tasks'
         headers = {}
         query_params = utils.get_query_params(operations.GetTasksRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -585,7 +585,7 @@ class Tasks:
         url = utils.generate_url(operations.GetTasksForProjectRequest, base_url, '/projects/{project_gid}/tasks', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetTasksForProjectRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -620,7 +620,7 @@ class Tasks:
         url = utils.generate_url(operations.GetTasksForSectionRequest, base_url, '/sections/{section_gid}/tasks', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetTasksForSectionRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -655,7 +655,7 @@ class Tasks:
         url = utils.generate_url(operations.GetTasksForTagRequest, base_url, '/tags/{tag_gid}/tasks', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetTasksForTagRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -692,7 +692,7 @@ class Tasks:
         url = utils.generate_url(operations.GetTasksForUserTaskListRequest, base_url, '/user_task_lists/{user_task_list_gid}/tasks', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetTasksForUserTaskListRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -732,7 +732,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.RemoveDependenciesForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -772,7 +772,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.RemoveDependentsForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -812,7 +812,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.RemoveFollowerForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -855,7 +855,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.RemoveProjectForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -895,7 +895,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.RemoveTagForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -961,7 +961,7 @@ class Tasks:
         url = utils.generate_url(operations.SearchTasksForWorkspaceRequest, base_url, '/workspaces/{workspace_gid}/tasks/search', request)
         headers = {}
         query_params = utils.get_query_params(operations.SearchTasksForWorkspaceRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -1001,7 +1001,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.SetParentForTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -1049,7 +1049,7 @@ class Tasks:
         if data is None and form is None:
             raise Exception('request body is required')
         query_params = utils.get_query_params(operations.UpdateTaskRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client

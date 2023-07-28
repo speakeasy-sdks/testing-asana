@@ -22,7 +22,7 @@ class PortfolioMemberships:
         url = utils.generate_url(operations.GetPortfolioMembershipRequest, base_url, '/portfolio_memberships/{portfolio_membership_gid}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetPortfolioMembershipRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -57,7 +57,7 @@ class PortfolioMemberships:
         url = base_url + '/portfolio_memberships'
         headers = {}
         query_params = utils.get_query_params(operations.GetPortfolioMembershipsRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -92,7 +92,7 @@ class PortfolioMemberships:
         url = utils.generate_url(operations.GetPortfolioMembershipsForPortfolioRequest, base_url, '/portfolios/{portfolio_gid}/portfolio_memberships', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetPortfolioMembershipsForPortfolioRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client

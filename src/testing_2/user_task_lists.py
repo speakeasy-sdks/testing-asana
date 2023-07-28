@@ -22,7 +22,7 @@ class UserTaskLists:
         url = utils.generate_url(operations.GetUserTaskListRequest, base_url, '/user_task_lists/{user_task_list_gid}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetUserTaskListRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -57,7 +57,7 @@ class UserTaskLists:
         url = utils.generate_url(operations.GetUserTaskListForUserRequest, base_url, '/users/{user_gid}/user_task_list', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetUserTaskListForUserRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client

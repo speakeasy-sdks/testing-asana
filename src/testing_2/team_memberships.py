@@ -22,7 +22,7 @@ class TeamMemberships:
         url = utils.generate_url(operations.GetTeamMembershipRequest, base_url, '/team_memberships/{team_membership_gid}', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetTeamMembershipRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -57,7 +57,7 @@ class TeamMemberships:
         url = base_url + '/team_memberships'
         headers = {}
         query_params = utils.get_query_params(operations.GetTeamMembershipsRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -92,7 +92,7 @@ class TeamMemberships:
         url = utils.generate_url(operations.GetTeamMembershipsForTeamRequest, base_url, '/teams/{team_gid}/team_memberships', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetTeamMembershipsForTeamRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -127,7 +127,7 @@ class TeamMemberships:
         url = utils.generate_url(operations.GetTeamMembershipsForUserRequest, base_url, '/users/{user_gid}/team_memberships', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetTeamMembershipsForUserRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client

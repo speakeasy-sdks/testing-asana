@@ -22,7 +22,7 @@ class CustomFieldSettings:
         url = utils.generate_url(operations.GetCustomFieldSettingsForPortfolioRequest, base_url, '/portfolios/{portfolio_gid}/custom_field_settings', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetCustomFieldSettingsForPortfolioRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
@@ -57,7 +57,7 @@ class CustomFieldSettings:
         url = utils.generate_url(operations.GetCustomFieldSettingsForProjectRequest, base_url, '/projects/{project_gid}/custom_field_settings', request)
         headers = {}
         query_params = utils.get_query_params(operations.GetCustomFieldSettingsForProjectRequest, request)
-        headers['Accept'] = 'application/json;q=1, application/json;q=0'
+        headers['Accept'] = 'application/json'
         headers['user-agent'] = f'speakeasy-sdk/{self.sdk_configuration.language} {self.sdk_configuration.sdk_version} {self.sdk_configuration.gen_version} {self.sdk_configuration.openapi_doc_version}'
         
         client = self.sdk_configuration.security_client
